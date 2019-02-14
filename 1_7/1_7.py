@@ -5,6 +5,7 @@
 #----------------------------------------------#
 
 from random import * #imports all of random
+import easygui as eg
 
 #setting up dictionary and boolean
 studDict = dict()
