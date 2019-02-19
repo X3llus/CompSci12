@@ -5,7 +5,6 @@
 #----------------------------------------------#
 
 from random import * #imports all of random
-import easygui as eg
 
 #setting up dictionary and boolean
 studDict = dict()
@@ -32,7 +31,7 @@ while students > 0:
             while numOMarks > 0:
                 numOMarks -= 1
                 tempMark.append(randint(0, 100))
-                break
+            break
         else:
             print("\nNot a number or a valid command")
 
