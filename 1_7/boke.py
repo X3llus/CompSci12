@@ -7,7 +7,6 @@
 from random import * #imports all of random
 
 #setting up dictionary and boolean
-studDict = dict()
 eMarks = True
 
 print("\nWelcome to my program")
@@ -24,8 +23,6 @@ while students > 0:
 
         if nMark == "next":
             break
-        elif nMark.isnumeric():
-            tempMark.append(int(nMark))
         elif nMark == "random":
             numOMarks = randint(1, 8)
             while numOMarks > 0:
@@ -33,10 +30,9 @@ while students > 0:
                 tempMark.append(randint(0, 100))
             break
         else:
-            print("\nNot a number or a valid command")
+            tempMark.append(int(nMark))
 
-    students -= 1
-    studDict.update( {(studName) : (tempMark)} )
+    studDict.update[ {(studName) : (tempMark)} ]
 
 #displays each students average than overall average
 for key in studDict.keys():
