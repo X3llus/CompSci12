@@ -30,11 +30,11 @@ def main():
     guesses = 0
     while True:
         guesses += 1
-        guess = input("Guess the number");
-        if(guess == myNumber):
+        guess = int(input("Guess the number"))
+        if guess == myNumber:
             break
         else:
             print("Nope, guess again!")
-    print("You got it in", guesses, ternary(guesses), "!")
+    print("You got it in {} guesses!".format(guesses))
 
 main()
