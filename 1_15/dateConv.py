@@ -3,8 +3,24 @@ def conversion():
 
 def check(inp):
     if len(inp) == 8:
-        if int(inp[0]+inp[1]) <= 12:
-
+        m = int(inp[0]+inp[1]) #month
+        d = int(inp[2]+inp[3]) #day
+        y = int(inp[4]+inp[5]+inp[6]+inp[7])
+        if m == 1 or m == 3 or m == 5 or m == 7 or m == 8 or m == 10 or m == 12:
+            if d <= 31:
+                return True
+        elif m == 4 or m == 6 or m == 9 or m == 11:
+            if d <= 30:
+                return True
+        elif m == 2:
+            if y % 4 == 0 and (not y % 100 == 0 or y % 400 == 0):
+                if d <= 29:
+                    return True
+            else:
+                if d <= 28:
+                    return True
+        else:
+            return False
 
 def main():
 
@@ -24,14 +40,16 @@ def main():
     while True:
         tempStr = str(input("Give me a date (MMDDYYYY):\n"))
 
-
-
+        if check(tempStr):
+            break
+        else:
+            print("\nIncorrect Date.\n")
 
     date.append(tempStr[2]+tempStr[3]) #day
     date.append(tempStr[0]+tempStr[1]) #month
     date.append(tempStr[4]+tempStr[5]+tempStr[6]+tempStr[7]) #year
 
-    print ("{}".format(month[date[0]]))
+    print ("{} {} {}".format(int(date[0]), month[date[1]], date[2]))
 
     return 0
 
