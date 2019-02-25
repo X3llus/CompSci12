@@ -1,11 +1,14 @@
-def conversion():
-    print("nothing yet")
+#----------------------------------------------#
+#               Author: Braden                 #
+#              Date: 25/02/2019                #
+#               Program: 1_15                  #
+#----------------------------------------------#
 
-def check(inp):
+def check(inp): #check inputs to make sure the date is correct
     if len(inp) == 8:
-        m = int(inp[0]+inp[1]) #month
-        d = int(inp[2]+inp[3]) #day
-        y = int(inp[4]+inp[5]+inp[6]+inp[7])
+        m = int(inp[0]+inp[1])               #month
+        d = int(inp[2]+inp[3])               #day
+        y = int(inp[4]+inp[5]+inp[6]+inp[7]) #year
         if m == 1 or m == 3 or m == 5 or m == 7 or m == 8 or m == 10 or m == 12:
             if d <= 31:
                 return True
@@ -35,7 +38,7 @@ def main():
     "11":"November", "12":"December"
     }
 
-    while True:
+    while True: #input loop
         tempStr = str(input("Give me a date (MMDDYYYY):\n"))
 
         if check(tempStr):
@@ -43,8 +46,8 @@ def main():
         else:
             print("\nIncorrect Date.\n")
 
-    date.append(tempStr[2]+tempStr[3]) #day
-    date.append(tempStr[0]+tempStr[1]) #month
+    date.append(tempStr[2]+tempStr[3])                       #day
+    date.append(tempStr[0]+tempStr[1])                       #month
     date.append(tempStr[4]+tempStr[5]+tempStr[6]+tempStr[7]) #year
 
     print ("{} {} {}".format(int(date[0]), month[date[1]], date[2]))
