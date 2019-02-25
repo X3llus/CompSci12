@@ -25,8 +25,6 @@ def check(inp):
 def main():
 
     date = list()
-    tempDate = list()
-    tempInt = 0
     tempStr = ""
     month = {
     "01":"January", "02":"February",
@@ -50,7 +48,5 @@ def main():
     date.append(tempStr[4]+tempStr[5]+tempStr[6]+tempStr[7]) #year
 
     print ("{} {} {}".format(int(date[0]), month[date[1]], date[2]))
-
-    return 0
 
 main()
