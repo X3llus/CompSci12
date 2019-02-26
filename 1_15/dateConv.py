@@ -25,11 +25,11 @@ def check(inp): #check inputs to make sure the date is correct
         else:
             return False
 
-def main():
+def main(): #main function
 
-    date = list()
-    tempStr = ""
-    month = {
+    date = list() #the date
+    tempStr = ""  #just a temporary string
+    month = {     #dictionary for converting numbers to months
     "01":"January", "02":"February",
     "03":"March", "04":"April",
     "05":"May", "06":"June",
@@ -41,7 +41,7 @@ def main():
     while True: #input loop
         tempStr = str(input("Give me a date (MMDDYYYY):\n"))
 
-        if check(tempStr):
+        if check(tempStr): #calls check function to check input
             break
         else:
             print("\nIncorrect Date.\n")
