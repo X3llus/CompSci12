@@ -9,14 +9,14 @@ def check(inp): #check inputs to make sure the date is correct
         m = int(inp[0]+inp[1])               #month
         d = int(inp[2]+inp[3])               #day
         y = int(inp[4]+inp[5]+inp[6]+inp[7]) #year
-        if m == 1 or m == 3 or m == 5 or m == 7 or m == 8 or m == 10 or m == 12:
+        if m == 1 or m == 3 or m == 5 or m == 7 or m == 8 or m == 10 or m == 12: #checks for months with 31 days
             if d <= 31:
                 return True
-        elif m == 4 or m == 6 or m == 9 or m == 11:
+        elif m == 4 or m == 6 or m == 9 or m == 11: #checks for months with 30 days
             if d <= 30:
                 return True
         elif m == 2:
-            if y % 4 == 0 and (not y % 100 == 0 or y % 400 == 0):
+            if y % 4 == 0 and (not y % 100 == 0 or y % 400 == 0): #checks if it is a leap year
                 if d <= 29:
                     return True
             else:
