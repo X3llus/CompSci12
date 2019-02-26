@@ -5,14 +5,13 @@
 #----------------------------------------------#
 
 def main():
-    inString = input("Give me a string with spaces:\n")
+    inString = input("Give me a string with spaces:\n") #get the input
     last = ""
     newString = ""
 
-    for i in inString:
+    for i in inString: #iterate through string and remove extra spaces
         if last == " " and i == " ":
             last = i
-            continue
         else:
             newString += i
             last = i
