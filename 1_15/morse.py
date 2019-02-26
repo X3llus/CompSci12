@@ -27,7 +27,13 @@ def toMorse(inp): #convert to morse code
     return morse
 
 def main(): #main function, get the input and print the morse code
-    inputVar = input("Convert to morse code:\n")
+    while True:
+        inputVar = input("Convert to morse code:\n")
+        try:
+            toMorse(inputVar)
+            break
+        except KeyError:
+            print("Not convertable")
     print(toMorse(inputVar))
 
 main()
