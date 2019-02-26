@@ -4,11 +4,11 @@
 #               Program: 1_15                  #
 #----------------------------------------------#
 
-def rot13Conv(inp):
+def rot13Conv(inp): #converts the string to ROT13 (rotates characters by 13)
     table = str.maketrans("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvqxyz", "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghidklm")
     return str.translate(inp, table)
 
-def main():
+def main(): #gets input and prints the encrypted string
     inpStr = input("What to encrypt (ROT13):\n")
     print (rot13Conv(inpStr))
 
