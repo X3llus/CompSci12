@@ -15,6 +15,7 @@ def main():
         else:
             newString += i
             last = i
+            
     print (newString)
 
 main()
