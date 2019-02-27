@@ -37,5 +37,4 @@ def main(): #main function, get the input and print the morse code
         except KeyError:
             print("Not convertable")
 
-
 main()
