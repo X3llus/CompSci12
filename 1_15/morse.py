@@ -4,6 +4,8 @@
 #               Program: 1_15                  #
 #----------------------------------------------#
 
+import antigravity
+
 def toMorse(inp): #convert to morse code
     mDict = { #morse code dictionary
         "a":".-", "b":"-...", "c":"-.-.", "d":"-..",
@@ -30,10 +32,10 @@ def main(): #main function, get the input and print the morse code
     while True:
         inputVar = input("Convert to morse code:\n")
         try:
-            toMorse(inputVar)
+            print(toMorse(inputVar))
             break
         except KeyError:
             print("Not convertable")
-    print(toMorse(inputVar))
+
 
 main()
