@@ -1,7 +1,7 @@
 #----------------------------------------------#
 #               Author: Braden                 #
 #              Date: 26/02/2019                #
-#               Program: 1_15                  #
+#               Program: ROT13                 #
 #----------------------------------------------#
 
 def rot13Conv(inp): #converts the string to ROT13 (rotates characters by 13)

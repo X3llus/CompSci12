@@ -1,7 +1,7 @@
 #----------------------------------------------#
 #               Author: Braden                 #
 #              Date: 25/02/2019                #
-#               Program: 1_15                  #
+#          Program: convert the date           #
 #----------------------------------------------#
 
 def check(inp): #check inputs to make sure the date is correct
