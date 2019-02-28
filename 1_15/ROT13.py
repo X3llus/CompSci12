@@ -5,7 +5,8 @@
 #----------------------------------------------#
 
 def rot13Conv(inp): #converts the string to ROT13 (rotates characters by 13)
-    table = str.maketrans("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvqxyz", "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghidklm")
+    table = str.maketrans("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvqxyz"
+    , "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghidklm")
     return str.translate(inp, table)
 
 def main(): #gets input and prints the encrypted string
