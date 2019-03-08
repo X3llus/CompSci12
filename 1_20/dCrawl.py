@@ -11,7 +11,9 @@ class character():
 
         self.race = ""
         self.role = ""
-        self.background = ""
+        self.weapon = {
+        "warrior":""
+        }
 
     def create(self):
         for i in self.statQueue:
@@ -43,6 +45,27 @@ class character():
                     break
                 else:
                     print("Stat not available.")
+
+        while True:
+            self.race = input("Are you a human, elf, or dwarf >")
+            if self.race == "human":
+                self.intelligence += 1
+                self.charisma += 2
+                break
+            elif self.race == "elf":
+                self.dexterity += 2
+                self.wisdom += 1
+                break
+            elif self.race == "dwarf":
+                self.constitution += 2
+                self.strength += 1
+                break
+            else:
+                print ("Not an option")
+
+        while True:
+            self.role = input("Are you a warrior, mage, ranger, templar, thief, bard, monk")
+
 
 def main():
     player = character()
