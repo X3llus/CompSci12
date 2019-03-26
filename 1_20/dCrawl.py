@@ -12,7 +12,7 @@ class character():
         self.race = ""
         self.role = ""
         self.weapon = {
-        "warrior":""
+        "warrior":"sword", ""
         }
 
     def create(self):
