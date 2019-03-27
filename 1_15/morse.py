@@ -4,8 +4,6 @@
 #         Program: convert morse code          #
 #----------------------------------------------#
 
-import antigravity
-
 def toMorse(inp): #convert to morse code
     mDict = { #morse code dictionary
         "a":".-", "b":"-...", "c":"-.-.", "d":"-..",
